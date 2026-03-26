@@ -2,16 +2,12 @@
   <div class="sticky top-0 left-0 z-30 bg-gradient-to-b  py-4 w-screen flex justify-between bg-dark-blue">
     <div class="flex ml-6">
       <a :href="logoHref">
-        <img class="w-16 lg:w-20 mt-1.5 object-contain" :src="logo" alt="Logo"/>
+        <img class="w-16 lg:w-20 mt-1.5 object-contain" :src="logo" alt="Logo" />
       </a>
     </div>
     <div class="hidden lg:flex items-center gap-6 mr-14 ">
-      <a
-          v-for="item in navItems"
-          :key="item.href"
-          class="hover-underline-animation"
-          :class="{selected: item.selected}"
-          :href="item.href">
+      <a v-for="item in navItems" :key="item.href" class="hover-underline-animation" :class="{ selected: item.selected }"
+        :href="item.href">
         {{ item.label }}
       </a>
 
@@ -23,7 +19,8 @@
     </div>
     <div class="flex lg:hidden items-center mr-6">
       <a :href="resumeFileName" target="_blank">
-        <div class="border px-3 py-1.5 text-sm transition-colors ease-in duration-900 opacity-100 hover:text-light-blue rounded">
+        <div
+          class="border px-3 py-1.5 text-sm transition-colors ease-in duration-900 opacity-100 hover:text-light-blue rounded">
           Resume
         </div>
       </a>
@@ -48,7 +45,7 @@ const navItems = ref<NavItem[]>([
   { label: 'About', href: '#about', selected: false },
   { label: 'Experience', href: '#experience', selected: false },
   { label: 'Education', href: '#education', selected: false },
-  { label: 'Open Source', href: '#projects', selected: false },
+  { label: 'Contributions', href: '#projects', selected: false },
   { label: 'Contact', href: '#contact', selected: false },
 ]);
 
@@ -108,5 +105,4 @@ const resumeFileName = 'resume.pdf';
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-
 </style>
