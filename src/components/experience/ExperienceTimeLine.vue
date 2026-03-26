@@ -40,7 +40,6 @@
 <script setup lang="ts">
 import vuSvg from '@assets/vu.svg';
 import dongItSvg from '@assets/dongIT.svg'
-import myLogo from '@assets/logo.png'
 import capisoftLogo from '@assets/capiscoft-white.png'
 import myParcelLogo from '@assets/myparcel-logo.svg'
 import { computed, onMounted, ref, watch } from 'vue';
