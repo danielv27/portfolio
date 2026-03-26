@@ -92,11 +92,11 @@ story.append(section_hr())
 story.append(Paragraph("Open Source &amp; Research", sectionStyle))
 story.append(b(
     '<b><link href="https://github.com/danielv27/ast-insight" color="#0055cc">AST Insight</link></b>: '
-    'MSc thesis — an AST-based static analysis tool in Python that detects and automatically corrects security vulnerabilities in C code.'
+    'MSc Thesis — an AST-based static analysis tool in Python that detects and automatically corrects security vulnerabilities in C code.'
 ))
 story.append(b(
     '<b><link href="https://github.com/atlarge-research/continuum" color="#0055cc">TS EDSL (Continuum)</link></b>: '
-    'Contributed a TypeScript embedded DSL for cloud simulation configuration to an open-source research project at atlarge-research.'
+    'BSc Thesis - Designed and developed a TypeScript embedded DSL (EDSL) for cloud simulation configuration to an open-source research project at atlarge-research.'
 ))
 story.append(section_hr())
 
