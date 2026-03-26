@@ -118,7 +118,7 @@ const entries: Entry[] = [
         <li>Worked with React, React Native, Firebase, and Flutter</li>
       </ul>`,
     icon: myLogo,
-    iconStyles: 'max-h-14 pb-5'
+    iconStyles: 'max-h-16 pb-5'
   },
   {
     date: 'Sep 2021',
@@ -126,7 +126,7 @@ const entries: Entry[] = [
     content: `
       <p>Guided CS and AI students through coursework, reinforcing programming skills and core concepts.</p>`,
     icon: vuSvg,
-    iconStyles: 'max-h-20 max-w-32',
+    iconStyles: 'max-h-20 mb-1 max-w-32',
     link: 'https://www.vu.nl'
   },
 ];
