@@ -25,10 +25,7 @@
           />
         </div>
         <div ref="descriptionRef" class="text-gray text-lg lg:mr-20">
-          Welcome to my portfolio! Here, you'll find examples of my work, skills,
-          and experience creating <span class="text-light-blue">innovative software solutions</span>. I'm committed to
-          staying up-to-date with the latest technologies and trends in the field, and I
-          invite you to explore my portfolio to see what I can offer as a <span class="text-light-blue">software engineer</span>.
+          Full-stack developer building <span class="text-light-blue">reliable software</span> across the entire stack — from clean APIs and scalable services to polished <span class="text-light-blue">user interfaces</span>.
         </div>
       </div>
     </div>

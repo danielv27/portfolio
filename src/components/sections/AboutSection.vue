@@ -6,16 +6,11 @@
           About Me
         </h1>
         <section ref="contentRef">
-          Hi, my name is Daniel Berzak Verner and I am a full-stack software engineer specializing in frontend development.
+          I'm Daniel Berzak Verner, a full-stack software engineer passionate about building reliable, well-crafted software across the entire stack.
           <br><br>
-          Alongside love for developing state-of-the-art full-stack software solutions,
-          I'm deeply passionate about creating software that not only works well but feels great to use.
-          This led me to primarily focus on frontend development, ensuring application components are modular, robust, flexible
-          and visually appealing.
+          With experience spanning frontend, backend, and DevOps, I enjoy working on systems end-to-end — from designing clean APIs and scalable services to building intuitive user interfaces. I value modular architecture, automated testing, and CI/CD pipelines that keep teams shipping with confidence.
           <br><br>
-          Along side frontend development, creating full-stack projects helped me establish a firm understanding of other parts of
-          the development stack including backend development, with practices like the micro-service architecture and DevOps, incorporating
-          practices such as containerization and CI/CD pipelines for both deployment and testing.
+          I also enjoy contributing to open source projects and exploring areas like static analysis and developer tooling.
         </section>
       </div>
       <img ref="stackImgRef" class="w-48 hidden md:block object-contain self-start" :src="Stack" alt="stack"/>
@@ -24,7 +19,7 @@
 </template>
 <script setup lang="ts">
 import Stack from '@assets/stack-expanded.png'
-import {onBeforeMount, onMounted, ref} from "vue";
+import {ref} from "vue";
 import {useMotion} from "@vueuse/motion";
 import {useWindowSize} from "@vueuse/core";
 

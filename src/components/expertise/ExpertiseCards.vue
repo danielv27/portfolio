@@ -17,7 +17,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import {type ComponentPublicInstance, computed, onMounted, type Ref, ref, watch} from "vue";
+import {type ComponentPublicInstance, computed, onMounted, type Ref, ref} from "vue";
 import {useMotion} from "@vueuse/motion";
 import Flicking from "@egjs/vue3-flicking";
 import {AutoPlay, Perspective} from "@egjs/flicking-plugins";
@@ -37,35 +37,9 @@ const panelsPerView = computed(() => {
   return 3;
 });
 
-const frontEndCard: CardData = {
-  title: 'Frontend',
-  content: 'Create engaging, responsive interfaces by optimizing user experience and performance, ensuring seamless and visually appealing applications.',
-  icons: [
-    {
-      name: 'si-vuedotjs',
-      tooltip: 'VueJs'
-    },
-    {
-      name: 'si-react',
-      tooltip: 'React'
-    },
-    {
-      name: 'si-typescript',
-      tooltip: 'TypeScript'
-    },
-    {
-      name: 'si-tailwindcss',
-      tooltip: 'TailwindCSS'
-    },
-    {
-      name: 'si-flutter',
-      tooltip: 'Flutter'
-    },
-  ]
-};
 const backEndCard: CardData = {
   title: 'Backend',
-  content: 'Design and implement robust server-side logic. Ensuring databases and APIs are efficient, scalable and secure forming the backbone for reliable applications.',
+  content: 'Design scalable APIs and services with a focus on reliability, security, and clean architecture.',
   icons: [
     {
       name: 'si-laravel',
@@ -85,17 +59,39 @@ const backEndCard: CardData = {
     }
   ]
 };
+const frontEndCard: CardData = {
+  title: 'Frontend',
+  content: 'Build responsive, performant interfaces with modern frameworks and component-driven architecture.',
+  icons: [
+    {
+      name: 'si-vuedotjs',
+      tooltip: 'Vue.js'
+    },
+    {
+      name: 'si-react',
+      tooltip: 'React'
+    },
+    {
+      name: 'si-typescript',
+      tooltip: 'TypeScript'
+    },
+    {
+      name: 'si-tailwindcss',
+      tooltip: 'TailwindCSS'
+    },
+  ]
+};
 const devOpsCard: CardData = {
   title: 'DevOps',
-  content: 'Streamlining deployment with CI/CD practices and containerization. Utilizing DevOps practices to ensure efficient operations, infrastructure maintenance and seamless development and deployment workflows.',
+  content: 'Automate deployments with CI/CD pipelines, containerization, and cloud infrastructure.',
   icons: [
     {
       name: 'si-docker',
-      tooltip: 'Container Orchestration'
+      tooltip: 'Docker'
     },
     {
       name: 'si-linux',
-      tooltip: 'Monolithic Deployment'
+      tooltip: 'Linux'
     },
     {
       name: 'si-amazonaws',
@@ -103,13 +99,13 @@ const devOpsCard: CardData = {
     },
     {
       name: 'si-github',
-      tooltip: 'Github Actions (CI/CD)'
+      tooltip: 'GitHub Actions'
     },
   ]
 };
 const testingCard: CardData = {
-  title: 'Testing & Quality Assurance',
-  content: 'Ensuring software reliability through comprehensive testing strategies. This includes implementing unit, component and end-to-end tests to maintain high standards of quality and stability.',
+  title: 'Testing & QA',
+  content: 'Maintain quality through unit, integration, and end-to-end testing strategies.',
   icons: [
     {
       name: 'si-vite',
@@ -126,19 +122,12 @@ const testingCard: CardData = {
   ]
 };
 
-const cards: Ref<CardData[]> = computed(() => smallScreen.value
-    ? [
-      frontEndCard,
-      backEndCard,
-      devOpsCard,
-      testingCard,
-    ] : [
-      backEndCard,
-      frontEndCard,
-      devOpsCard,
-      testingCard,
-    ]
-);
+const cards: Ref<CardData[]> = computed(() => [
+  backEndCard,
+  frontEndCard,
+  devOpsCard,
+  testingCard,
+]);
 
 
 const props = defineProps<Props>();

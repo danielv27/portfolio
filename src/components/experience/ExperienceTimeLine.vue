@@ -47,6 +47,7 @@ import dongItSvg from '@assets/dongIT.svg'
 import myLogo from '@assets/logo.png'
 import zorgpleinLogo from '@assets/zorgplein-white.png'
 import capisoftLogo from '@assets/capiscoft-white.png'
+import myParcelLogo from '@assets/myparcel-logo.svg'
 import { computed, onMounted, ref, watch } from 'vue';
 import { useWindowScroll } from "@vueuse/core";
 import { isInViewport } from "@utils/viewPort.js";
@@ -75,13 +76,25 @@ interface Entry {
 const listStyle = "list-disc ml-3.5"
 const entries: Entry[] = [
   {
+    date: 'Sep 2024',
+    title: 'Software Engineer, MyParcel.com',
+    content: `
+         <ul class="${listStyle}">
+            <li>Full-stack development on logistics and shipping platform</li>
+            <li>Building and maintaining scalable backend services and APIs</li>
+            <li>Developing frontend features with modern JavaScript frameworks</li>
+        </ul>`,
+    icon: myParcelLogo,
+    iconStyles: 'max-h-16 mb-1'
+  },
+  {
     date: 'Aug 2023',
     title: 'Software Engineer, DongIT',
     content: `
          <ul class="${listStyle}">
-            <li>Migrate projects to modern frontend JavaScript frameworks to enhance user experience and optimizes performance</li>
-            <li>Implement containerized backend services</li>
-            <li>Create CI/CD pipelines for seamless deployment and automated testing</li>
+            <li>Migrated projects to modern frontend frameworks</li>
+            <li>Built containerized backend services</li>
+            <li>Set up CI/CD pipelines for deployment and testing</li>
         </ul>`,
     icon: dongItSvg,
     iconStyles: 'max-h-16 mb-1'
@@ -91,9 +104,9 @@ const entries: Entry[] = [
     title: 'Full Stack Developer, Capisoft B.V.',
     content: `
       <ul class="${listStyle}">
-        <li>Oversee adaptation between back-end and front-end.</li>
-        <li>Supervise, testing and deployment to ensure maintainability and extensibility.</li>
-        <li>Incorporate Collaborative agile practices using tools like Trello, and Jira.</li>
+        <li>Bridged back-end and front-end integration</li>
+        <li>Managed testing, deployment, and code quality</li>
+        <li>Agile workflows with Trello and Jira</li>
       </ul>`,
     icon: capisoftLogo,
     iconStyles: 'max-h-10 mb-4',
@@ -103,8 +116,8 @@ const entries: Entry[] = [
     title: 'Frontend Lead, Zorgplein.online',
     content: `
       <ul class="${listStyle}">
-        <li>Overseeing all aspects of the front-end side of a cross-platform mobile application.</li>
-        <li>Planning, delegation, deployment, and testing of various components, ensuring high standards.</li>
+        <li>Led front-end development of a cross-platform mobile app</li>
+        <li>Owned planning, delegation, deployment, and testing</li>
       </ul>`,
     icon: zorgpleinLogo,
     iconStyles: 'max-h-12 mb-4'
@@ -114,8 +127,8 @@ const entries: Entry[] = [
     title: 'Full Stack Developer, DBV Software Solutions',
     content: `
       <ul class="${listStyle}">
-        <li>Created full stack applications that run natively on mobile, desktop, and web.</li>
-        <li>Worked on several projects using frameworks such as React, React Native, Firebase, and Flutter.</li>
+        <li>Built cross-platform apps for mobile, desktop, and web</li>
+        <li>Worked with React, React Native, Firebase, and Flutter</li>
       </ul>`,
     icon: myLogo,
     iconStyles: 'max-h-16 pb-4'
@@ -124,7 +137,7 @@ const entries: Entry[] = [
     date: 'Sep 2021',
     title: 'Teaching Assistant, Vrije Universiteit Amsterdam',
     content: `
-      <p>Work with smaller groups of Computer Science and AI students to reinforce the learning process for various courses they take along the year with the main focus on developing knowledge and coding skills.</p>`,
+      <p>Guided CS and AI students through coursework, reinforcing programming skills and core concepts.</p>`,
     icon: vuSvg,
     iconStyles: 'max-h-20 max-w-32'
   },
@@ -135,7 +148,7 @@ const currentEntry = computed(() => entries[currentIndex.value]);
 
 <style scoped>
 li {
-  height: 90px;
+  height: 75px;
 }
 
 </style>

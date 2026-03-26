@@ -32,8 +32,8 @@ import {isInViewport} from "@utils/viewPort.js";
 
 const { y } = useWindowScroll();
 
-function elementInViewPort(label: string){
-  const el = document.getElementById(label.toLowerCase());
+function elementInViewPort(id: string){
+  const el = document.getElementById(id);
   if(! el) {
     return false;
   }
@@ -41,16 +41,22 @@ function elementInViewPort(label: string){
 }
 
 
-const navLabels = ['About', 'Experience', 'Education', 'Projects', 'Contact'];
+interface NavItem {
+  label: string;
+  href: string;
+  selected: boolean;
+}
 
-const navItems = ref(navLabels.map(label => ({
-  label,
-  href: '#' + label.toLowerCase(),
-  selected: elementInViewPort(label),
-})));
+const navItems = ref<NavItem[]>([
+  { label: 'About', href: '#about', selected: false },
+  { label: 'Experience', href: '#experience', selected: false },
+  { label: 'Education', href: '#education', selected: false },
+  { label: 'Open Source', href: '#projects', selected: false },
+  { label: 'Contact', href: '#contact', selected: false },
+]);
 
 watch(y, () => navItems.value.forEach(navItem => {
-    navItem.selected = elementInViewPort(navItem.label);
+    navItem.selected = elementInViewPort(navItem.href.slice(1));
 }));
 
 const logoHref = '#main'
