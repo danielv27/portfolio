@@ -19,7 +19,7 @@
         </div>
       </div>
     </div>
-    <ExpertiseCards class="mt-24" :delay="3000" />
+    <ExpertiseCards class="mt-24" :delay="3200" />
   </div>
 </template>
 <script setup>
