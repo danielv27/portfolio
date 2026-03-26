@@ -9,7 +9,7 @@
     <a
         class="hover:text-light-blue"
         target="_blank"
-        href="https://www.linkedin.com/in/daniel-verner-berzak-0819591b8/">
+        href="https://www.linkedin.com/in/daniel-verner-0819591b8/">
       <VIcon name="si-linkedin" :scale="1.5"></VIcon>
     </a>
   </div>
