@@ -24,7 +24,9 @@
             <div class="flex items-center gap-3 mb-2 md:mb-6">
               <h1 class="text-2xl">{{ currentEntry.title }}</h1>
               <a v-if="currentEntry.link" :href="currentEntry.link" target="_blank"
-                class="text-light-blue hover:underline text-sm opacity-70 hover:opacity-100">↗</a>
+                class="text-light-blue opacity-60 hover:opacity-100 transition-opacity">
+                <VIcon name="bi-box-arrow-up-right" scale="1.2" />
+              </a>
             </div>
             <div v-html="currentEntry.content"></div>
           </div>

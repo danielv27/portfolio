@@ -27,6 +27,7 @@ import {
     SiWebpack,
     SiTestinglibrary,
 } from "oh-vue-icons/icons/si";
+import { BiBoxArrowUpRight } from "oh-vue-icons/icons/bi";
 
 const app = createApp(App)
 
@@ -48,6 +49,7 @@ addIcons(
     SiVite,
     SiWebpack,
     SiTestinglibrary,
+    BiBoxArrowUpRight,
 );
 
 app.component('VIcon', OhVueIcon);
