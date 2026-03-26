@@ -26,9 +26,9 @@
 
 <script setup lang="ts">
 import logo from '@assets/logo.png'
-import {ref, watch} from "vue";
-import {useWindowScroll} from "@vueuse/core";
-import {isInViewport} from "@utils/viewPort.js";
+import { ref, watch } from "vue";
+import { useWindowScroll } from "@vueuse/core";
+import { isInViewport } from "@utils/viewPort";
 
 const { y } = useWindowScroll();
 
