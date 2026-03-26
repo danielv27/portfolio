@@ -6,22 +6,26 @@
           About Me
         </h1>
         <section ref="contentRef">
-          I'm Daniel Berzak Verner, a full-stack software engineer passionate about building reliable, well-crafted software across the entire stack.
+          I'm Daniel Verner, a full-stack software engineer passionate about building reliable, well-crafted software
+          across the entire stack.
           <br><br>
-          With experience spanning frontend, backend, and DevOps, I enjoy working on systems end-to-end — from designing clean APIs and scalable services to building intuitive user interfaces. I value modular architecture, automated testing, and CI/CD pipelines that keep teams shipping with confidence.
+          With experience spanning frontend, backend, and DevOps, I enjoy working on systems end-to-end — from designing
+          clean APIs and scalable services to building intuitive user interfaces. I value modular architecture,
+          automated testing, and CI/CD pipelines that keep teams shipping with confidence.
           <br><br>
-          I also enjoy contributing to open source projects and exploring areas like static analysis and developer tooling.
+          I also enjoy contributing to open source projects and exploring areas like static analysis and developer
+          tooling.
         </section>
       </div>
-      <img ref="stackImgRef" class="w-48 hidden md:block object-contain self-start" :src="Stack" alt="stack"/>
+      <img ref="stackImgRef" class="w-48 hidden md:block object-contain self-start" :src="Stack" alt="stack" />
     </div>
   </div>
 </template>
 <script setup lang="ts">
 import Stack from '@assets/stack-expanded.png'
-import {ref} from "vue";
-import {useMotion} from "@vueuse/motion";
-import {useWindowSize} from "@vueuse/core";
+import { ref } from "vue";
+import { useMotion } from "@vueuse/motion";
+import { useWindowSize } from "@vueuse/core";
 
 const headingRef = ref();
 const contentRef = ref();
@@ -44,8 +48,8 @@ function useMotionCustom(element: any, delay: number) {
   })
 }
 
-const {width} = useWindowSize();
-if(width.value >= 1000){
+const { width } = useWindowSize();
+if (width.value >= 1000) {
   useMotionCustom(headingRef, 300);
   useMotionCustom(contentRef, 600);
   useMotionCustom(stackImgRef, 1000);

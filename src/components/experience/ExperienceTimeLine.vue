@@ -115,8 +115,9 @@ const entries: Entry[] = [
     title: 'Software Engineer, DBV Software Solutions',
     content: `
       <ul class="${listStyle}">
-        <li>Freelance studio delivering cross-platform apps for mobile, desktop, and web</li>
-        <li>Shipped production apps with React Native, Flutter, and Firebase</li>
+        <li>Founded a freelance company, handling client work end-to-end</li>
+        <li>Delivered cross-platform apps (mobile, desktop, web)</li>
+        <li>Managed project scoping, timelines, and client communication</li>
       </ul>`,
     icon: myLogo,
     iconStyles: 'max-h-16 pb-5'

@@ -1,4 +1,4 @@
-# Daniel Berzak Verner — Portfolio
+# Daniel Verner — Portfolio
 
 Personal portfolio website showcasing my experience, open source contributions, and expertise as a full-stack software engineer.
 
