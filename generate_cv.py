@@ -58,8 +58,7 @@ story.append(Paragraph("Profile", sectionStyle))
 story.append(Paragraph(
     "Full-stack software engineer with a strong focus on backend systems, microservice architecture, and end-to-end delivery. "
     "I enjoy owning features from system design to production — building reliable integrations, automating workflows, and "
-    "collaborating closely with stakeholders to ship software that solves real problems. "
-    "MSc in Software Engineering (University of Amsterdam) and BSc in Computer Science — Cum Laude (Vrije Universiteit Amsterdam).",
+    "collaborating closely with stakeholders to ship software that solves real problems.",
     profileStyle
 ))
 story.append(section_hr())
@@ -107,7 +106,7 @@ story.append(b("<b>Backend</b>: PHP (Laravel), Python (Django), Node.js (Express
 story.append(b("<b>Frontend</b>: Vue.js, React, TypeScript, TailwindCSS"))
 story.append(b("<b>DevOps</b>: Docker, GitHub Actions, CI/CD, Linux, AWS"))
 story.append(b("<b>Testing</b>: Vitest, Testing Library, Unit / Component / E2E"))
-story.append(b("<b>Spoken</b>: English (fluent), Hebrew (native), Dutch (basic)"))
+story.append(b("<b>Spoken</b>: English (fluent), Hebrew (native)"))
 story.append(section_hr())
 
 # ── Education ────────────────────────────────────────────────────────────
