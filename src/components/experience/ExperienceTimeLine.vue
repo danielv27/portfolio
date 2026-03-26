@@ -28,7 +28,7 @@
       </li>
     </ul>
     <Transition :duration="550" name="nested">
-      <div ref="cardRef" v-show="show" class="absolute mt-5 ml-20 px-6 pt-4 md:pt-14 w-auto h-full bg-dark-blue rounded-b-4xl rounded-r-4xl">
+      <div ref="cardRef" v-show="show" class="absolute mt-5 ml-20 px-6 pt-4 md:pt-14 w-[calc(100%-5rem)] h-full bg-dark-blue rounded-b-4xl rounded-r-4xl">
         <div class="inner h-full flex flex-col justify-between">
           <div>
             <h1 class="text-2xl mb-2 md:mb-6">{{ currentEntry.title }}</h1>
@@ -85,7 +85,7 @@ const entries: Entry[] = [
             <li>Developing frontend features with modern JavaScript frameworks</li>
         </ul>`,
     icon: myParcelLogo,
-    iconStyles: 'max-h-16 mb-1'
+    iconStyles: 'h-7 w-auto mb-4'
   },
   {
     date: 'Aug 2023',

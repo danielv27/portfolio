@@ -25,7 +25,10 @@
           />
         </div>
         <div ref="descriptionRef" class="text-gray text-lg lg:mr-20">
-          Full-stack developer building <span class="text-light-blue">reliable software</span> across the entire stack — from clean APIs and scalable services to polished <span class="text-light-blue">user interfaces</span>.
+          Welcome to my portfolio! Here you'll find my work, skills,
+          and experience as a <span class="text-light-blue">full-stack software engineer</span>. I enjoy building
+          reliable systems across the entire stack, from scalable backend services and clean APIs
+          to performant, polished <span class="text-light-blue">user interfaces</span>.
         </div>
       </div>
     </div>
