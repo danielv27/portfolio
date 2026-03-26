@@ -98,29 +98,18 @@ const entries: Entry[] = [
     link: 'https://www.dongit.nl'
   },
   {
-    date: 'Nov 2022',
+    date: 'Feb 2022',
     title: 'Software Engineer, Capisoft B.V.',
     content: `
       <ul class="${listStyle}">
-        <li>Lead role managing project delivery and technical direction</li>
-        <li>Owned full-stack integration between backend APIs and client apps</li>
-        <li>Drove testing, deployment, and code quality standards</li>
+        <li>Lead role managing project delivery and technical direction across client products</li>
+        <li>Owned full-stack integration between backend services and client apps on web and mobile</li>
+        <li>Shipped cross-platform apps using React Native, Flutter, and Firebase</li>
+        <li>Drove testing, deployment, and code quality standards in an Agile environment</li>
       </ul>`,
     icon: capisoftLogo,
     iconStyles: 'max-h-10 mb-4',
     link: 'https://www.capisoft.nl'
-  },
-  {
-    date: 'Feb 2022',
-    title: 'Software Engineer, DBV Software Solutions',
-    content: `
-      <ul class="${listStyle}">
-        <li>Founded a freelance company, handling client work end-to-end</li>
-        <li>Delivered cross-platform apps (mobile, desktop, web)</li>
-        <li>Managed project scoping, timelines, and client communication</li>
-      </ul>`,
-    icon: myLogo,
-    iconStyles: 'max-h-16 pb-5'
   },
   {
     date: 'Sep 2021',
@@ -138,6 +127,6 @@ const currentEntry = computed(() => entries[currentIndex.value]);
 
 <style scoped>
 li {
-  height: 90px;
+  height: 110px;
 }
 </style>
