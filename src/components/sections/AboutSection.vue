@@ -1,7 +1,7 @@
 <template>
   <div class="flex bg-gradient-to-b from-dark-blue to-green justify-center h-144">
     <div id="about" class="block md:flex w-full md:w-2/3 px-4 text-left text-white mt-16 gap-12">
-      <div>
+      <div class=" mt-14">
         <h1 ref="headingRef" class="w-full flex text-4xl mb-4">
           About Me
         </h1>
@@ -12,9 +12,6 @@
           With experience spanning frontend, backend, and DevOps, I enjoy working on systems end-to-end — from designing
           clean APIs and scalable services to building intuitive user interfaces. I value modular architecture,
           automated testing, and CI/CD pipelines that keep teams shipping with confidence.
-          <br><br>
-          I also enjoy contributing to open source projects and exploring areas like static analysis and developer
-          tooling.
         </section>
       </div>
       <img ref="stackImgRef" class="w-48 hidden md:block object-contain self-start" :src="Stack" alt="stack" />
