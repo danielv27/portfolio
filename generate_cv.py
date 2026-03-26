@@ -95,7 +95,7 @@ story.append(b(
     'MSc Thesis — an AST-based static analysis tool in Python that detects and automatically corrects security vulnerabilities in C code.'
 ))
 story.append(b(
-    '<b><link href="https://github.com/atlarge-research/continuum" color="#0055cc">TS EDSL (Continuum)</link></b>: '
+    '<b><link href="https://github.com/atlarge-research/continuum/tree/main/input/dsl/src" color="#0055cc">TS EDSL (Contribution to Continuum)</link></b>: '
     'BSc Thesis - Designed and developed a TypeScript embedded DSL (EDSL) for cloud simulation configuration to an open-source research project at atlarge-research.'
 ))
 story.append(section_hr())
