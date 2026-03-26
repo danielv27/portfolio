@@ -1,37 +1,31 @@
 <template>
   <div class="flex w-[95vw] md:w-1/2 relative">
     <ul class="w-1/12 min-w-28 timeline timeline-vertical text-white">
-      <li
-          v-for="(entry, index) in entries"
-          :key="index"
-          class="entry transition ease-in-out delay-75 bg-blue-500 active:text-dark-blue hover:scale-110 duration-300"
-          :class="{'text-dark-blue' : currentIndex === index}"
-          @mouseenter="setIndex(index)"
-      >
-        <hr v-if="index !== 0"/>
+      <li v-for="(entry, index) in entries" :key="index"
+        class="entry transition ease-in-out delay-75 bg-blue-500 active:text-dark-blue hover:scale-110 duration-300"
+        :class="{ 'text-dark-blue': currentIndex === index }" @mouseenter="setIndex(index)">
+        <hr v-if="index !== 0" />
         <div class="timeline-start">{{ entry.date }}</div>
         <div class="timeline-middle">
-          <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="h-5 w-5"
-          >
-            <path
-                fill-rule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                clip-rule="evenodd"
-            />
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+            <path fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd" />
           </svg>
         </div>
-        <hr v-if="index !== entries.length - 1"/>
+        <hr v-if="index !== entries.length - 1" />
       </li>
     </ul>
     <Transition :duration="550" name="nested">
-      <div ref="cardRef" v-show="show" class="absolute mt-5 ml-20 px-6 pt-4 md:pt-14 w-[calc(100%-5rem)] h-full bg-dark-blue rounded-b-4xl rounded-r-4xl">
+      <div ref="cardRef" v-show="show"
+        class="absolute mt-5 ml-20 px-6 pt-4 md:pt-14 w-[calc(100%-5rem)] h-full bg-dark-blue rounded-b-4xl rounded-r-4xl">
         <div class="inner h-full flex flex-col justify-between">
           <div>
-            <h1 class="text-2xl mb-2 md:mb-6">{{ currentEntry.title }}</h1>
+            <div class="flex items-center gap-3 mb-2 md:mb-6">
+              <h1 class="text-2xl">{{ currentEntry.title }}</h1>
+              <a v-if="currentEntry.link" :href="currentEntry.link" target="_blank"
+                class="text-light-blue hover:underline text-sm opacity-70 hover:opacity-100">↗</a>
+            </div>
             <div v-html="currentEntry.content"></div>
           </div>
           <img class="self-end" :class="currentEntry.iconStyles" :src="currentEntry.icon" :alt="currentEntry.title">
@@ -45,7 +39,6 @@
 import vuSvg from '@assets/vu.svg';
 import dongItSvg from '@assets/dongIT.svg'
 import myLogo from '@assets/logo.png'
-import zorgpleinLogo from '@assets/zorgplein-white.png'
 import capisoftLogo from '@assets/capiscoft-white.png'
 import myParcelLogo from '@assets/myparcel-logo.svg'
 import { computed, onMounted, ref, watch } from 'vue';
@@ -71,6 +64,7 @@ interface Entry {
   content: string;
   icon: string;
   iconStyles?: string;
+  link?: string;
 }
 
 const listStyle = "list-disc ml-3.5"
@@ -80,12 +74,13 @@ const entries: Entry[] = [
     title: 'Software Engineer, MyParcel.com',
     content: `
          <ul class="${listStyle}">
-            <li>Full-stack development on logistics and shipping platform</li>
+            <li>Full-stack development on a logistics and shipping platform</li>
             <li>Building and maintaining scalable backend services and APIs</li>
             <li>Developing frontend features with modern JavaScript frameworks</li>
         </ul>`,
     icon: myParcelLogo,
-    iconStyles: 'h-8 w-auto mb-4'
+    iconStyles: 'h-8 w-auto mb-4 mr-1',
+    link: 'https://www.myparcel.com'
   },
   {
     date: 'Aug 2023',
@@ -97,7 +92,8 @@ const entries: Entry[] = [
             <li>Set up CI/CD pipelines for deployment and testing</li>
         </ul>`,
     icon: dongItSvg,
-    iconStyles: 'max-h-16 mb-1'
+    iconStyles: 'max-h-16 mb-1',
+    link: 'https://www.dongit.nl'
   },
   {
     date: 'Nov 2022',
@@ -106,21 +102,12 @@ const entries: Entry[] = [
       <ul class="${listStyle}">
         <li>Bridged back-end and front-end integration</li>
         <li>Managed testing, deployment, and code quality</li>
+        <li>Led front-end of Zorgplein.online, a cross-platform mobile app for healthcare</li>
         <li>Agile workflows with Trello and Jira</li>
       </ul>`,
     icon: capisoftLogo,
     iconStyles: 'max-h-10 mb-4',
-  },
-  {
-    date: 'Nov 2022',
-    title: 'Frontend Lead, Zorgplein.online',
-    content: `
-      <ul class="${listStyle}">
-        <li>Led front-end development of a cross-platform mobile app</li>
-        <li>Owned planning, delegation, deployment, and testing</li>
-      </ul>`,
-    icon: zorgpleinLogo,
-    iconStyles: 'max-h-12 mb-4'
+    link: 'https://www.capisoft.nl'
   },
   {
     date: 'Feb 2022',
@@ -131,7 +118,7 @@ const entries: Entry[] = [
         <li>Worked with React, React Native, Firebase, and Flutter</li>
       </ul>`,
     icon: myLogo,
-    iconStyles: 'max-h-16 pb-4'
+    iconStyles: 'max-h-14 pb-5'
   },
   {
     date: 'Sep 2021',
@@ -139,7 +126,8 @@ const entries: Entry[] = [
     content: `
       <p>Guided CS and AI students through coursework, reinforcing programming skills and core concepts.</p>`,
     icon: vuSvg,
-    iconStyles: 'max-h-20 max-w-32'
+    iconStyles: 'max-h-20 max-w-32',
+    link: 'https://www.vu.nl'
   },
 ];
 
@@ -148,7 +136,6 @@ const currentEntry = computed(() => entries[currentIndex.value]);
 
 <style scoped>
 li {
-  height: 75px;
+  height: 90px;
 }
-
 </style>
