@@ -3,15 +3,17 @@
     <h2 class="text-3xl font-bold mb-6">Contributions</h2>
     <div class="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <div v-for="(project, index) in projects" :key="index"
-           class="flex flex-col project-card bg-lighter-dark-blue rounded-lg shadow-md p-6 justify-between">
+        class="flex flex-col project-card bg-lighter-dark-blue rounded-lg shadow-md p-6 justify-between">
         <div>
           <h3 class="text-light-blue text-xl font-semibold mb-2">{{ project.title }}</h3>
           <p class="text-gray text-gray-700">{{ project.description }}</p>
         </div>
-        <div :class="`mt-8 flex ${project.link ? 'justify-between' : 'justify-end'}`" >
-          <a v-show="project.link" :href="project.link" target="_blank" class="text-blue-500 hover:underline inline-block">View
+        <div :class="`mt-8 flex ${project.link ? 'justify-between' : 'justify-end'}`">
+          <a v-show="project.link" :href="project.link" target="_blank"
+            class="text-blue-500 hover:underline inline-block">View
             Project</a>
-          <img v-if="project.image" :class="'max-w-8 rounded-md  object-contain ' + (project.imageClass ?? '')" :src="project.image" :alt="project.title"/>
+          <img v-if="project.image" :class="'max-w-8 rounded-md  object-contain ' + (project.imageClass ?? '')"
+            :src="project.image" :alt="project.title" />
         </div>
       </div>
     </div>
@@ -33,7 +35,7 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: 'TS EDSL — Continuum',
+    title: 'TS EDSL — Continuum @Large Research',
     description: 'Contributed to the Continuum project by designing and implementing a TypeScript embedded domain-specific language (EDSL) for cloud simulation configuration. Leveraged TypeScript\'s type system and VS Code snippets for a type-safe, ergonomic developer experience.',
     image: atLargeLogo,
     link: 'https://github.com/atlarge-research/continuum/tree/7ee6d908fafe9985337f42e104fec90de13357fe/input/dsl/src'
