@@ -70,13 +70,13 @@ interface Entry {
 const listStyle = "list-disc ml-3.5"
 const entries: Entry[] = [
   {
-    date: 'Sep 2024',
-    title: 'Software Engineer, MyParcel.com',
+    date: 'Jan 2025',
+    title: 'Software Engineer, MyParcel',
     content: `
          <ul class="${listStyle}">
-            <li>Full-stack development on a logistics and shipping platform</li>
-            <li>Building and maintaining scalable backend services and APIs</li>
-            <li>Developing frontend features with modern JavaScript frameworks</li>
+            <li>Built and maintained microservices powering a European e-commerce shipping platform</li>
+            <li>Collaborated with stakeholders and clients to refine features and requirements</li>
+            <li>Took active part in system design, CI/CD pipelines, and full-stack delivery</li>
         </ul>`,
     icon: myParcelLogo,
     iconStyles: 'h-8 w-auto mb-4 mr-1',
@@ -87,9 +87,9 @@ const entries: Entry[] = [
     title: 'Software Engineer, DongIT',
     content: `
          <ul class="${listStyle}">
-            <li>Migrated projects to modern frontend frameworks</li>
-            <li>Built containerized backend services</li>
-            <li>Set up CI/CD pipelines for deployment and testing</li>
+            <li>Full-stack role across both frontend (Vue) and backend services</li>
+            <li>Containerized services with Docker for reliable deployments</li>
+            <li>Set up CI/CD pipelines to streamline testing and releases</li>
         </ul>`,
     icon: dongItSvg,
     iconStyles: 'max-h-16 mb-1',
@@ -97,13 +97,12 @@ const entries: Entry[] = [
   },
   {
     date: 'Nov 2022',
-    title: 'Full Stack Developer, Capisoft B.V.',
+    title: 'Software Engineer, Capisoft B.V.',
     content: `
       <ul class="${listStyle}">
-        <li>Bridged back-end and front-end integration</li>
-        <li>Managed testing, deployment, and code quality</li>
-        <li>Led front-end of Zorgplein.online, a cross-platform mobile app for healthcare</li>
-        <li>Agile workflows with Trello and Jira</li>
+        <li>Lead role managing project delivery and technical direction</li>
+        <li>Owned full-stack integration between backend APIs and client apps</li>
+        <li>Drove testing, deployment, and code quality standards</li>
       </ul>`,
     icon: capisoftLogo,
     iconStyles: 'max-h-10 mb-4',
@@ -111,11 +110,11 @@ const entries: Entry[] = [
   },
   {
     date: 'Feb 2022',
-    title: 'Full Stack Developer, DBV Software Solutions',
+    title: 'Software Engineer, DBV Software Solutions',
     content: `
       <ul class="${listStyle}">
-        <li>Built cross-platform apps for mobile, desktop, and web</li>
-        <li>Worked with React, React Native, Firebase, and Flutter</li>
+        <li>Freelance studio delivering cross-platform apps for mobile, desktop, and web</li>
+        <li>Shipped production apps with React Native, Flutter, and Firebase</li>
       </ul>`,
     icon: myLogo,
     iconStyles: 'max-h-16 pb-5'
@@ -124,7 +123,7 @@ const entries: Entry[] = [
     date: 'Sep 2021',
     title: 'Teaching Assistant, Vrije Universiteit Amsterdam',
     content: `
-      <p>Guided CS and AI students through coursework, reinforcing programming skills and core concepts.</p>`,
+      <p>Mentored CS and AI students in small groups, teaching core programming concepts and problem-solving skills.</p>`,
     icon: vuSvg,
     iconStyles: 'max-h-20 mb-1 max-w-32',
     link: 'https://www.vu.nl'
