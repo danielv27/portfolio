@@ -8,7 +8,7 @@
       </RotateOnHover>
       <div class="text-left ml-3 min-w-0 w-full">
         <div class="text-xl md:text-4xl mb-2 break-words">
-          <AnimatedText class="text-2xl md:text-4xl mb-2" text="Hi, I'm Daniel," :delay="400" :time-between="180" />
+          <AnimatedText class="text-3xl lg:text-4xl mb-2" text="Hi, I'm Daniel," :delay="400" :time-between="180" />
           <AnimatedText text="A Full-Stack Software Engineer" :delay="1100" :time-between="240" />
         </div>
         <div ref="descriptionRef" class="text-gray text-md md:text-lg lg:mr-20">
