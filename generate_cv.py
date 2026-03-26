@@ -47,7 +47,7 @@ story.append(Paragraph(
     ' &nbsp;|&nbsp; '
     '<link href="https://github.com/danielv27" color="#0055cc">GitHub</link>'
     ' &nbsp;|&nbsp; '
-    '<link href="https://linkedin.com/in/daniel-verner" color="#0055cc">LinkedIn</link>'
+    '<link href="https://www.linkedin.com/in/daniel-verner-0819591b8/" color="#0055cc">LinkedIn</link>'
     ' &nbsp;|&nbsp; danielv2000@gmail.com &nbsp;|&nbsp; +31 06 15205800 &nbsp;|&nbsp; Amsterdam, Netherlands',
     contactStyle
 ))
