@@ -85,7 +85,7 @@ const entries: Entry[] = [
             <li>Developing frontend features with modern JavaScript frameworks</li>
         </ul>`,
     icon: myParcelLogo,
-    iconStyles: 'h-7 w-auto mb-4'
+    iconStyles: 'h-8 w-auto mb-4'
   },
   {
     date: 'Aug 2023',
