@@ -1,3 +1,6 @@
+// Always start at the top on refresh
+window.scrollTo(0, 0);
+
 import {createApp} from 'vue'
 import {MotionPlugin} from '@vueuse/motion'
 import VNetworkGraph from "v-network-graph"

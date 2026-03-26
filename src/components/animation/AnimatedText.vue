@@ -1,8 +1,9 @@
 <template>
-  <div class="flex">
+  <div class="flex flex-wrap">
   <span
       v-for="word in textArray"
       ref="wordArrayRef"
+      class="whitespace-nowrap"
   >{{ word }}&nbsp;</span>
   </div>
 </template>

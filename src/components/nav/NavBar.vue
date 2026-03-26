@@ -21,6 +21,13 @@
         </div>
       </a>
     </div>
+    <div class="flex lg:hidden items-center mr-6">
+      <a :href="resumeFileName" target="_blank">
+        <div class="border px-3 py-1.5 text-sm transition-colors ease-in duration-900 opacity-100 hover:text-light-blue rounded">
+          Resume
+        </div>
+      </a>
+    </div>
   </div>
 </template>
 
@@ -28,18 +35,8 @@
 import logo from '@assets/logo.png'
 import { ref, watch } from "vue";
 import { useWindowScroll } from "@vueuse/core";
-import { isInViewport } from "@utils/viewPort";
 
 const { y } = useWindowScroll();
-
-function elementInViewPort(id: string){
-  const el = document.getElementById(id);
-  if(! el) {
-    return false;
-  }
-  return isInViewport(el);
-}
-
 
 interface NavItem {
   label: string;
@@ -55,9 +52,27 @@ const navItems = ref<NavItem[]>([
   { label: 'Contact', href: '#contact', selected: false },
 ]);
 
-watch(y, () => navItems.value.forEach(navItem => {
-    navItem.selected = elementInViewPort(navItem.href.slice(1));
-}));
+function updateActiveSection() {
+  const threshold = window.innerHeight * 0.45;
+  let activeIndex = -1;
+
+  navItems.value.forEach((item, index) => {
+    const el = document.getElementById(item.href.slice(1));
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    // A section is the active candidate if its top has entered the upper 45%
+    // of the viewport and hasn't fully scrolled past the top yet
+    if (rect.top <= threshold && rect.bottom > 0) {
+      activeIndex = index; // last one wins = deepest visible section
+    }
+  });
+
+  navItems.value.forEach((item, index) => {
+    item.selected = index === activeIndex;
+  });
+}
+
+watch(y, updateActiveSection);
 
 const logoHref = '#main'
 const resumeFileName = 'resume.pdf';
