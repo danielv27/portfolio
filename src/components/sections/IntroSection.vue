@@ -26,7 +26,7 @@
 import AnimatedText from "@components/animation/AnimatedText.vue";
 import { computed, ref } from "vue";
 import { useMotion } from "@vueuse/motion";
-import profilePicture from "@assets/my-photo-grey-bg.jpeg"
+import profilePicture from "@assets/profile-blue-bg.png"
 import ExpertiseCards from "@components/expertise/ExpertiseCards.vue";
 import squiggleSVG from "@assets/squigglesAndDots.svg"
 import RotateOnHover from "@components/animation/RotateOnHover.vue";
