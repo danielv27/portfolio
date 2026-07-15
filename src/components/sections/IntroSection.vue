@@ -12,10 +12,11 @@
           <AnimatedText text="A Full-Stack Software Engineer" :delay="1100" :time-between="240" />
         </div>
         <div ref="descriptionRef" class="text-gray text-md md:text-lg lg:mr-20">
-          Welcome to my portfolio! Here you'll find my work, skills,
-          and experience as a <span class="text-light-blue">full-stack software engineer</span>. I enjoy building
-          reliable systems across the entire stack, from scalable backend services and clean APIs
-          to performant, polished <span class="text-light-blue">user interfaces</span>.
+          My work spans the full software lifecycle, from designing <span class="text-light-blue">clean APIs</span> and
+          <span class="text-light-blue">backend services</span> to building
+          <span class="text-light-blue">intuitive interfaces</span>. I focus on
+          <span class="text-light-blue">maintainable</span> code, <span class="text-light-blue">secure</span> systems,
+          and <span class="text-light-blue">reliable</span> delivery from development to production.
         </div>
       </div>
     </div>
@@ -24,9 +25,9 @@
 </template>
 <script setup>
 import AnimatedText from "@components/animation/AnimatedText.vue";
-import { computed, ref } from "vue";
+import { ref } from "vue";
 import { useMotion } from "@vueuse/motion";
-import profilePicture from "@assets/profile-blue-bg.png"
+import profilePicture from "@assets/profile.png"
 import ExpertiseCards from "@components/expertise/ExpertiseCards.vue";
 import squiggleSVG from "@assets/squigglesAndDots.svg"
 import RotateOnHover from "@components/animation/RotateOnHover.vue";
