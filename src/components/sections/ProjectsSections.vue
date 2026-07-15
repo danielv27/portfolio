@@ -1,6 +1,6 @@
 <template>
   <div id="projects" class="projects-section pt-12 px-10 md:px-16">
-    <h2 class="text-3xl font-bold mb-6">Contributions</h2>
+    <h2 class="text-3xl font-bold mb-6">Selected Work</h2>
     <div class="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <div v-for="(project, index) in projects" :key="index"
         class="flex flex-col project-card bg-lighter-dark-blue rounded-lg shadow-md p-6 justify-between">
@@ -35,17 +35,17 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: 'TS EDSL — Continuum @Large Research',
-    description: 'Contributed to the Continuum project by designing and implementing a TypeScript embedded domain-specific language (EDSL) for cloud simulation configuration. Leveraged TypeScript\'s type system and VS Code snippets for a type-safe, ergonomic developer experience.',
-    image: atLargeLogo,
-    link: 'https://github.com/atlarge-research/continuum/tree/7ee6d908fafe9985337f42e104fec90de13357fe/input/dsl/src'
-  },
-  {
     title: 'AST Insight — Static Code Analysis',
-    description: 'MSc thesis project: an AST-based static analysis tool for detecting and correcting security vulnerabilities in C code. Parses source files into abstract syntax trees, identifies insecure patterns, and applies automated corrections.',
+    description: 'MSc thesis project: a static analysis platform that identifies security vulnerabilities in C code and automatically remediates them through AST-based analysis.',
     image: astLogo,
     imageClass: 'border border-dark-blue bg-white',
     link: 'https://github.com/danielv27/ast-insight'
+  },
+  {
+    title: 'Continuum — TypeScript DSL',
+    description: 'BSc thesis project: an embedded TypeScript DSL for configuring cloud simulations. Contributed the type-safe developer experience to the open-source Continuum research platform.',
+    image: atLargeLogo,
+    link: 'https://github.com/atlarge-research/continuum/tree/7ee6d908fafe9985337f42e104fec90de13357fe/input/dsl/src'
   },
   {
     title: 'KB-Indexer — Cloud Migration',

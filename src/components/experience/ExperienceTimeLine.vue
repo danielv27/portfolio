@@ -5,7 +5,7 @@
         class="entry transition ease-in-out delay-75 bg-blue-500 active:text-dark-blue hover:scale-110 duration-300"
         :class="{ 'text-dark-blue': currentIndex === index }" @mouseenter="setIndex(index)">
         <hr v-if="index !== 0" />
-        <div class="timeline-start">{{ entry.date }}</div>
+        <div class="timeline-start whitespace-nowrap text-xs md:text-base translate-x-4 md:translate-x-0">{{ entry.date }}</div>
         <div class="timeline-middle">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
             <path fill-rule="evenodd"
@@ -22,7 +22,7 @@
         <div class="inner h-full flex flex-col justify-between">
           <div>
             <div class="flex items-center gap-3 mb-2 md:mb-6">
-              <h1 class="text-2xl">{{ currentEntry.title }}</h1>
+              <h1 class="text-xl md:text-2xl">{{ currentEntry.title }}</h1>
               <a v-if="currentEntry.link" :href="currentEntry.link" target="_blank"
                 class="text-light-blue opacity-60 hover:opacity-100 transition-opacity">
                 <VIcon name="bi-box-arrow-up-right" scale="1.2" />
@@ -71,47 +71,47 @@ interface Entry {
 const listStyle = "list-disc ml-3.5"
 const entries: Entry[] = [
   {
-    date: 'Jan 2025',
+    date: '2025–Now',
     title: 'Software Engineer, MyParcel',
     content: `
          <ul class="${listStyle}">
-            <li>Built and maintained microservices powering a European e-commerce shipping platform</li>
-            <li>Collaborated with stakeholders and clients to refine features and requirements</li>
-            <li>Took active part in system design, CI/CD pipelines, and full-stack delivery</li>
+            <li>Design carrier, marketplace, and warehouse integrations for business-critical shipment workflows</li>
+            <li>Build and operate Laravel and Node.js services with Docker and Kubernetes</li>
+            <li>Automate testing, auditing, deployments, and releases with GitHub Actions</li>
+            <li>Develop internal CLI and provisioning tooling for engineering workflows</li>
         </ul>`,
     icon: myParcelLogo,
     iconStyles: 'h-8 w-auto mb-4 mr-1',
     link: 'https://www.myparcel.com'
   },
   {
-    date: 'Aug 2023',
+    date: '2023–24',
     title: 'Software Engineer, DongIT',
     content: `
          <ul class="${listStyle}">
-            <li>Full-stack role across both frontend (Vue) and backend services</li>
-            <li>Containerized services with Docker for reliable deployments</li>
-            <li>Set up CI/CD pipelines to streamline testing and releases</li>
+            <li>Designed backend APIs and server-rendered applications in containerized environments</li>
+            <li>Led migrations from legacy jQuery and JavaScript applications to Vue.js</li>
+            <li>Introduced automated testing in a security-focused development environment</li>
         </ul>`,
     icon: dongItSvg,
     iconStyles: 'max-h-16 mb-1',
     link: 'https://www.dongit.nl'
   },
   {
-    date: 'Feb 2022',
+    date: '2022–23',
     title: 'Software Engineer, Capisoft B.V.',
     content: `
       <ul class="${listStyle}">
-        <li>Lead role managing project delivery and technical direction across client products</li>
-        <li>Owned full-stack integration between backend services and client apps on web and mobile</li>
-        <li>Shipped cross-platform apps using React Native, Flutter, and Firebase</li>
-        <li>Drove testing, deployment, and code quality standards in an Agile environment</li>
+        <li>Built web, mobile, and desktop applications across multiple client projects</li>
+        <li>Led front-end development and coordinated feature delivery with stakeholders</li>
+        <li>Delivered cross-platform products using React Native and Flutter</li>
       </ul>`,
     icon: capisoftLogo,
     iconStyles: 'max-h-10 mb-4',
     link: 'https://www.capisoft.nl'
   },
   {
-    date: 'Sep 2021',
+    date: '2021–22',
     title: 'Teaching Assistant, Vrije Universiteit Amsterdam',
     content: `
       <p>Mentored CS and AI students in small groups, teaching core programming concepts and problem-solving skills.</p>`,
@@ -127,5 +127,11 @@ const currentEntry = computed(() => entries[currentIndex.value]);
 <style scoped>
 li {
   height: 110px;
+}
+
+@media (max-width: 767px) {
+  li.entry {
+    height: 120px;
+  }
 }
 </style>

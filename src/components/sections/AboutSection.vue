@@ -6,12 +6,12 @@
           About Me
         </h1>
         <section ref="contentRef">
-          I'm Daniel Verner, a full-stack software engineer passionate about building reliable, well-crafted software
-          across the entire stack.
+          I'm Daniel Verner, a software engineer based in Amsterdam. I focus on backend and platform work: business-critical
+          integrations, APIs, containerized services, CI/CD systems, and internal developer tooling.
           <br><br>
-          With experience spanning frontend, backend, and DevOps, I enjoy working on systems end-to-end — from designing
-          clean APIs and scalable services to building intuitive user interfaces. I value modular architecture,
-          automated testing, and CI/CD pipelines that keep teams shipping with confidence.
+          I enjoy owning systems from implementation through deployment and operations. My full-stack background helps me
+          collaborate across product boundaries, and I apply secure coding practices with operational risks in mind. I value
+          clear architecture, automated testing, and delivery workflows that help teams ship confidently.
         </section>
       </div>
       <img ref="stackImgRef" class="w-48 hidden md:block object-contain self-start" :src="Stack" alt="stack" />

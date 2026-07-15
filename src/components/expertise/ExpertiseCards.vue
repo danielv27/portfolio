@@ -39,23 +39,23 @@ const panelsPerView = computed(() => {
 
 const backEndCard: CardData = {
   title: 'Backend',
-  content: 'Design scalable APIs and services with a focus on reliability, security, and clean architecture.',
+  content: 'Design production APIs, integrations, and services with a focus on reliability, security, and clear architecture.',
   icons: [
     {
       name: 'si-laravel',
       tooltip: 'Laravel'
     },
     {
-      name: 'si-django',
-      tooltip: 'Django'
+      name: 'si-nodedotjs',
+      tooltip: 'Node.js'
     },
     {
-      name: 'si-firebase',
-      tooltip: 'Firebase'
+      name: 'si-php',
+      tooltip: 'PHP'
     },
     {
-      name: 'si-express',
-      tooltip: 'Express'
+      name: 'si-python',
+      tooltip: 'Python'
     }
   ]
 };
@@ -82,8 +82,8 @@ const frontEndCard: CardData = {
   ]
 };
 const devOpsCard: CardData = {
-  title: 'DevOps',
-  content: 'Automate deployments with CI/CD pipelines, containerization, and cloud infrastructure.',
+  title: 'Infrastructure',
+  content: 'Run containerized applications across environments with Docker, Kubernetes, and Linux.',
   icons: [
     {
       name: 'si-docker',
@@ -94,39 +94,35 @@ const devOpsCard: CardData = {
       tooltip: 'Linux'
     },
     {
-      name: 'si-amazonaws',
-      tooltip: 'Amazon AWS'
-    },
-    {
-      name: 'si-github',
-      tooltip: 'GitHub Actions'
-    },
+      name: 'si-kubernetes',
+      tooltip: 'Kubernetes'
+    }
   ]
 };
-const testingCard: CardData = {
-  title: 'Testing & QA',
-  content: 'Maintain quality through unit, integration, and end-to-end testing strategies.',
+const toolingCard: CardData = {
+  title: 'Delivery & Tooling',
+  content: 'Build CI/CD systems, deployment automation, and internal tools that make engineering workflows safer and faster.',
   icons: [
     {
-      name: 'si-vite',
-      tooltip: 'Vitest'
+      name: 'si-githubactions',
+      tooltip: 'GitHub Actions'
     },
     {
-      name: 'si-webpack',
-      tooltip: 'Webpack'
+      name: 'si-git',
+      tooltip: 'Git'
     },
     {
-      name: 'si-testinglibrary',
-      tooltip: 'Testing Library'
+      name: 'si-gnubash',
+      tooltip: 'Bash'
     }
   ]
 };
 
 const cards: Ref<CardData[]> = computed(() => [
   backEndCard,
-  frontEndCard,
   devOpsCard,
-  testingCard,
+  toolingCard,
+  frontEndCard,
 ]);
 
 

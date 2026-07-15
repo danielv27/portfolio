@@ -26,13 +26,13 @@ import uvaLogo from '@assets/uva.svg'
 const educations = [
   {
     degree: 'MSc Software Engineering',
-    institution: 'Universiteit van Amsterdam',
+    institution: 'University of Amsterdam',
     period: 'Sep 2023 — Aug 2024',
     logo: uvaLogo,
     logoStyle: 'max-w-20 max-h-20 mt-2'
   },
   {
-    degree: 'BSc Computer Science',
+    degree: 'BSc Computer Science, Cum Laude',
     institution: 'Vrije Universiteit Amsterdam',
     period: 'Sep 2020 — Aug 2023',
     logo: vuLogo,

@@ -45,7 +45,7 @@ const navItems = ref<NavItem[]>([
   { label: 'About', href: '#about', selected: false },
   { label: 'Experience', href: '#experience', selected: false },
   { label: 'Education', href: '#education', selected: false },
-  { label: 'Contributions', href: '#projects', selected: false },
+  { label: 'Selected Work', href: '#projects', selected: false },
   { label: 'Contact', href: '#contact', selected: false },
 ]);
 
